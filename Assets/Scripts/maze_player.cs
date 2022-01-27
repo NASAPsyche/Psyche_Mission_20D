@@ -11,7 +11,8 @@ using UnityEngine.SceneManagement;
  */
 public class maze_player : MonoBehaviour
 {
-    public float speed = 3.5f;
+    [SerializeField] float speed = 3.5f;
+    [SerializeField] int maxQuestionNum = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,7 +49,15 @@ public class maze_player : MonoBehaviour
         if (collision.gameObject.tag == "CorrectAnswer")
 		{
             GameData.GlobalScore += 100;
-            SceneManager.LoadScene("Level1");
+            GameData.MazeQuestionNum++;
+            if(GameData.MazeQuestionNum >= maxQuestionNum) //Determine whether sufficient amount of questions have been asked
+			{
+               SceneManager.LoadScene("Level2");
+			}
+			else
+			{
+                SceneManager.LoadScene("Level1");
+            }
 		}
         if (collision.gameObject.tag == "IncorrectAnswer")
         {
