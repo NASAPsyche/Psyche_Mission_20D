@@ -50,6 +50,7 @@ public class maze_player : MonoBehaviour
 		{
             GameData.GlobalScore += 100;
             GameData.MazeQuestionNum++;
+            Debug.Log(GameData.MazeQuestionNum);
             if(GameData.MazeQuestionNum >= maxQuestionNum) //Determine whether sufficient amount of questions have been asked
 			{
                SceneManager.LoadScene("Level2");

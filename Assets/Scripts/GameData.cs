@@ -10,6 +10,7 @@ public class GameData : MonoBehaviour
     public static float GlobalScore = 0f;
     public static float GlobalTime = 0f;
     public static int MazeQuestionNum = 0; //To track how many questions have been asked in maze level
+    public static ArrayList questionList = new ArrayList();
 
     public void DataReset()//This method is used to reset global data such as score and time
 	{

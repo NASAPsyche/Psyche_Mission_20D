@@ -7,6 +7,9 @@ TagManager:
   - Walls
   - CorrectAnswer
   - IncorrectAnswer
+  - BOX
+  - AnswerPanel
+  - Answer
   layers:
   - Default
   - TransparentFX

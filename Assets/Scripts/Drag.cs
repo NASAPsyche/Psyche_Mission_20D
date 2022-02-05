@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //This script is inspired by Tarodev from https://www.youtube.com/watch?v=Tv82HIvKcZQ&list=PPSV
 public class Drag : MonoBehaviour
 {
 	private Camera camObj;
-
 	void Awake()
 	{
 		camObj = Camera.main;
@@ -22,4 +22,13 @@ public class Drag : MonoBehaviour
 		mousePos.z = 0;
 		return mousePos;
 	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.gameObject.tag == "BOX")
+		{
+			Debug.Log("HIT!");
+		}
+	}
+
 }
