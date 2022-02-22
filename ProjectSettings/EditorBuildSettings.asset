@@ -9,24 +9,36 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 1fb76e947115eae4092393a08a7f46f7
   - enabled: 1
-    path: Assets/Scenes/Level1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/StatsScreen.unity
+    guid: d736667103be38941911e684edb3c59c
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/OptionsMenu.unity
+    guid: 9677e69b88a4a0e40b1b2fbaad23fbb1
+  - enabled: 1
+    path: Assets/Scenes/Transition1.unity
+    guid: 04ec39f60964bb747a5dbfdeda4c7167
+  - enabled: 1
+    path: Assets/Scenes/Level1.unity
     guid: 9dad2838f75e32c4685b63dfc9a1506f
   - enabled: 1
+    path: Assets/Scenes/Transition2.unity
+    guid: 1b184f96a152f9447ae1d82ee351ca58
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: a93ed08f049e56448b19979c6db1841b
+  - enabled: 1
+    path: Assets/Scenes/Transition3.unity
+    guid: 58982851d250ce74f8c499405f04729b
+  - enabled: 1
     path: Assets/Scenes/Level3.unity
-    guid: 4fdff6bae6ab70b469b301afc543953c
+    guid: 49f3a270269d9bd4fa516284addcc3a7
+  - enabled: 1
+    path: Assets/Scenes/Transition4.unity
+    guid: cf99eb046517d134f80432e57a6d0468
   - enabled: 1
     path: Assets/Scenes/Level4.unity
-    guid: 74d45ceed190c0542b05b7078e9adfc3
+    guid: a47132c46cdbb4746ad4a17d7673d825
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 379b55292ce3eab4ba6b6f17ea468829
-  - enabled: 1
-    path: Assets/Scenes/FailScene.unity
-    guid: b7a8c32e41cfcb54a8741281b8d9f542
-  - enabled: 1
-    path: Assets/Scenes/OptionMenu.unity
-    guid: 9677e69b88a4a0e40b1b2fbaad23fbb1
   m_configObjects: {}
