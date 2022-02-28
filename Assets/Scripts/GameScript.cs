@@ -13,6 +13,8 @@ public class GameScript : MonoBehaviour
     private GameObject answer2;
     private GameObject answer3;
     private GameObject answer4;
+    private Vector3 originalPosition;
+    int wasAnswer = -1;
 
     void Start()
     {
@@ -31,6 +33,7 @@ public class GameScript : MonoBehaviour
                     GameSettings.MainMenu();
                 }
                 selectedObject = targetObject.transform.gameObject;
+                originalPosition = targetObject.transform.position;
                 offset = selectedObject.transform.position - mousePosition;
                 Collider2D answerObject = Physics2D.OverlapPoint(selectedObject.transform.position, Physics.DefaultRaycastLayers, -10, -1);
                 if (answerObject)
@@ -38,18 +41,22 @@ public class GameScript : MonoBehaviour
                     if (answerObject.name == "AnswerArea1")
                     {
                         answer1 = null;
+                        wasAnswer = 1;
                     }
                     else if (answerObject.name == "AnswerArea2")
                     {
                         answer2 = null;
+                        wasAnswer = 2;
                     }
                     else if (answerObject.name == "AnswerArea3")
                     {
                         answer3 = null;
+                        wasAnswer = 3;
                     }
                     else
                     {
                         answer4 = null;
+                        wasAnswer = 4;
                     }
                 }
                 SetButtonDisabled();
@@ -64,24 +71,116 @@ public class GameScript : MonoBehaviour
             Collider2D answerObject = Physics2D.OverlapPoint(selectedObject.transform.position, Physics.DefaultRaycastLayers, -10, -1);
             if (answerObject)
             {
-                selectedObject.transform.position = new Vector3(answerObject.transform.position.x, answerObject.transform.position.y, selectedObject.transform.position.z);
                 if (answerObject.name == "AnswerArea1")
                 {
-                    answer1 = selectedObject;
+                    if (answer1 == null)
+                    {
+                        answer1 = selectedObject;
+                        selectedObject.transform.position = new Vector3(answerObject.transform.position.x, answerObject.transform.position.y, selectedObject.transform.position.z);
+                    }
+                    else
+                    {
+                        selectedObject.transform.position = originalPosition;
+                        if(wasAnswer == 1)
+                        {
+                            answer1 = selectedObject;
+                        }
+                        else if (wasAnswer == 2)
+                        {
+                            answer2 = selectedObject;
+                        }
+                        else if (wasAnswer == 3)
+                        {
+                            answer3 = selectedObject;
+                        }
+                        else if (wasAnswer == 4)
+                        {
+                            answer4 = selectedObject;
+                        }
+                    }
                 }
                 else if (answerObject.name == "AnswerArea2")
                 {
-                    answer2 = selectedObject;
+                    if (answer2 == null)
+                    {
+                        answer2 = selectedObject;
+                        selectedObject.transform.position = new Vector3(answerObject.transform.position.x, answerObject.transform.position.y, selectedObject.transform.position.z);
+                    }
+                    else
+                    {
+                        selectedObject.transform.position = originalPosition;
+                        if (wasAnswer == 1)
+                        {
+                            answer1 = selectedObject;
+                        }
+                        else if (wasAnswer == 2)
+                        {
+                            answer2 = selectedObject;
+                        }
+                        else if (wasAnswer == 3)
+                        {
+                            answer3 = selectedObject;
+                        }
+                        else if (wasAnswer == 4)
+                        {
+                            answer4 = selectedObject;
+                        }
+                    }
                 }
                 else if (answerObject.name == "AnswerArea3")
                 {
-                    answer3 = selectedObject;
+                    if (answer3 == null)
+                    {
+                        answer3 = selectedObject;
+                        selectedObject.transform.position = new Vector3(answerObject.transform.position.x, answerObject.transform.position.y, selectedObject.transform.position.z);
+                    }
+                    else
+                    {
+                        selectedObject.transform.position = originalPosition;
+                        if (wasAnswer == 1)
+                        {
+                            answer1 = selectedObject;
+                        }
+                        else if (wasAnswer == 2)
+                        {
+                            answer2 = selectedObject;
+                        }
+                        else if (wasAnswer == 3)
+                        {
+                            answer3 = selectedObject;
+                        }
+                        else if (wasAnswer == 4)
+                        {
+                            answer4 = selectedObject;
+                        }
+                    }
+                }
+                else if (answer4 == null)
+                {
+                    answer4 = selectedObject;
+                    selectedObject.transform.position = new Vector3(answerObject.transform.position.x, answerObject.transform.position.y, selectedObject.transform.position.z);
                 }
                 else
                 {
-                    answer4 = selectedObject;
+                    selectedObject.transform.position = originalPosition;
+                    if (wasAnswer == 1)
+                    {
+                        answer1 = selectedObject;
+                    }
+                    else if (wasAnswer == 2)
+                    {
+                        answer2 = selectedObject;
+                    }
+                    else if (wasAnswer == 3)
+                    {
+                        answer3 = selectedObject;
+                    }
+                    else if (wasAnswer == 4)
+                    {
+                        answer4 = selectedObject;
+                    }
                 }
-                if(answer1 && answer2 && answer3 && answer4)
+                if (answer1 && answer2 && answer3 && answer4)
                 {
                     SetButtonEnabled();
                 }
@@ -90,6 +189,7 @@ public class GameScript : MonoBehaviour
             {
                 SetButtonDisabled();
             }
+            wasAnswer = -1;
             selectedObject = null;
         }
     }
