@@ -8,7 +8,6 @@ public class GameScript : MonoBehaviour
 
     private GameObject selectedObject;
     private Vector3 offset;
-
     private GameObject answer1;
     private GameObject answer2;
     private GameObject answer3;
@@ -16,8 +15,43 @@ public class GameScript : MonoBehaviour
     private Vector3 originalPosition;
     int wasAnswer = -1;
 
+    Question getQuestion()
+    {
+        int value = Random.Range(0, GameSettings.questionList.questions.Length - 1);
+        Question question = GameSettings.questionList.questions[value];
+        var questionList = new List<Question>(GameSettings.questionList.questions);
+        questionList.RemoveAt(value);
+        GameSettings.questionList.questions = questionList.ToArray();
+        return question;
+    }
+
     void Start()
     {
+        Question question1 = getQuestion();
+        Question question2 = getQuestion();
+        Question question3 = getQuestion();
+        Question question4 = getQuestion();
+
+        GameObject.Find("Question1").GetComponent<Text>().text = question1.question;
+        GameObject.Find("Question2").GetComponent<Text>().text = question2.question;
+        GameObject.Find("Question3").GetComponent<Text>().text = question3.question;
+        GameObject.Find("Question4").GetComponent<Text>().text = question4.question;
+        GameObject.Find("Answer1").GetComponent<Text>().text = question2.answers[1];
+        GameObject.Find("Answer2").GetComponent<Text>().text = question4.answers[2];
+        GameObject.Find("Answer3").GetComponent<Text>().text = question3.answers[0];
+        GameObject.Find("Answer4").GetComponent<Text>().text = question3.answers[1];
+        GameObject.Find("Answer5").GetComponent<Text>().text = question1.answers[0];
+        GameObject.Find("Answer6").GetComponent<Text>().text = question2.answers[0];
+        GameObject.Find("Answer7").GetComponent<Text>().text = question4.answers[1];
+        GameObject.Find("Answer8").GetComponent<Text>().text = question4.answers[0];
+        GameObject.Find("Answer9").GetComponent<Text>().text = question1.answers[1];
+        GameObject.Find("Answer10").GetComponent<Text>().text = question3.answers[2];
+        GameObject.Find("Answer11").GetComponent<Text>().text = question1.answers[2];
+        GameObject.Find("Answer12").GetComponent<Text>().text = question2.answers[3];
+        GameObject.Find("Answer13").GetComponent<Text>().text = question4.answers[3];
+        GameObject.Find("Answer14").GetComponent<Text>().text = question2.answers[2];
+        GameObject.Find("Answer15").GetComponent<Text>().text = question3.answers[3];
+        GameObject.Find("Answer16").GetComponent<Text>().text = question1.answers[3];
     }
 
     void Update()

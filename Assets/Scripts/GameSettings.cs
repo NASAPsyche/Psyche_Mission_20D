@@ -7,7 +7,7 @@ public class GameSettings : MonoBehaviour
 {
 
     private static float volume = 5.0f;
-    public static ArrayList questionList = new ArrayList();
+    public static QuestionList questionList;
 
     void Start()
     {

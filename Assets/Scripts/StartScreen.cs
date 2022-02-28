@@ -9,32 +9,12 @@ public class StartScreen : MonoBehaviour
 
     void Start()
     {
-        if(GameSettings.questionList.Count == 0)
-        {
-            ReadFromCSV();
-        }
+        ReadFromJSON();
     }
 
-    void ReadFromCSV()
+    void ReadFromJSON()
     {
-        string folderPath = Application.dataPath;
-        StreamReader reader = new StreamReader($"{folderPath}/WordBank.csv");
-        bool EOF = false;
-        while (!EOF)
-        {
-            string line = reader.ReadLine();
-            if (line == null)
-            {
-                EOF = true;
-                break;
-            }
-            GameSettings.questionList.Add(line);
-        }
-    }
-
-    public static void Quit()
-    {
-        Application.Quit();
+        GameSettings.questionList = JsonUtility.FromJson<QuestionList>(AnswerData.answerData);
     }
 
     public static void Play()
