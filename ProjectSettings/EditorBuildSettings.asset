@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 1fb76e947115eae4092393a08a7f46f7
   - enabled: 1
-    path: Assets/Scenes/StatsScreen.unity
-    guid: d736667103be38941911e684edb3c59c
-  - enabled: 1
     path: Assets/Scenes/OptionsMenu.unity
     guid: 9677e69b88a4a0e40b1b2fbaad23fbb1
   - enabled: 1
@@ -25,19 +22,19 @@ EditorBuildSettings:
     guid: 1b184f96a152f9447ae1d82ee351ca58
   - enabled: 1
     path: Assets/Scenes/Level2.unity
-    guid: d30988a96a74a794e865306eba5f6d7d
+    guid: 8e37478c6bbe42b4e9cb59fe80e3cca7
   - enabled: 1
     path: Assets/Scenes/Transition3.unity
     guid: 58982851d250ce74f8c499405f04729b
   - enabled: 1
     path: Assets/Scenes/Level3.unity
-    guid: 72b9fd206c9a6164d9b6e182c34c4fb6
+    guid: 67fa9308b11188046b880cec5c4c9376
   - enabled: 1
     path: Assets/Scenes/Transition4.unity
     guid: cf99eb046517d134f80432e57a6d0468
   - enabled: 1
     path: Assets/Scenes/Level4.unity
-    guid: d3c5b58cc877bca47a52ac5003237150
+    guid: c214e9cf95913a44fa7af2a7ede87d59
   - enabled: 1
     path: Assets/Scenes/EndScreen.unity
     guid: be9fd8c99266cea4689956cafade534a
