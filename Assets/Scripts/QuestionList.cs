@@ -34,14 +34,14 @@ public class AnswerData
               ""wrong_answer"": ""No""
             },
             {
-              ""question"": ""How long with the spacecraft fly?"",
+              ""question"": ""How long will the Psyche Mission last?"",
               ""correct_answer"": ""3.4 years"",
               ""wrong_answer"": ""3.4 hours""
             },
             {
               ""question"": ""What is the size of the spacecraft?"",
-              ""correct_answer"": ""Roughly the size of one tennis court"",
-              ""wrong_answer"": ""Roughly the size of one football field""
+              ""correct_answer"": ""The size of one tennis court"",
+              ""wrong_answer"": ""The size of one football field""
             },
             {
               ""question"": ""What are the terrestrial planets?"",
@@ -49,19 +49,19 @@ public class AnswerData
               ""wrong_answer"": ""Mercury, Jupiter, Earth and Mars""
             },
             {
-              ""question"": ""When will the spacecraft flyby Mars?"",
+              ""question"": ""When will the Psyche spacecraft fly by Mars?"",
               ""correct_answer"": ""2023"",
               ""wrong_answer"": ""2024""
             },
             {
-              ""question"": ""How many phases does the Psyche mission have?"",
+              ""question"": ""How many phases are there for the Psyche mission?"",
               ""correct_answer"": ""Four"",
               ""wrong_answer"": ""Five""
             },
             {
-              ""question"": ""When did we discover what Psyche is made of?"",
-              ""correct_answer"": ""2010"",
-              ""wrong_answer"": ""1990""
+              ""question"": ""How long have we known what Psyche is made of?"",
+              ""correct_answer"": ""Since 2010"",
+              ""wrong_answer"": ""Since 1990""
             },
             {
               ""question"": ""When was the Psyche mission selected by NASA?"",
@@ -79,7 +79,7 @@ public class AnswerData
               ""wrong_answer"": ""The spacecraft will return to Earth""
             },
             {
-              ""question"": ""What is Psyche orbiting?"",
+              ""question"": ""What is the Psyche asteroid orbiting?"",
               ""correct_answer"": ""The Sun"",
               ""wrong_answer"": ""Jupiter""
             },
@@ -87,11 +87,6 @@ public class AnswerData
               ""question"": ""Who is the mission led by?"",
               ""correct_answer"": ""Arizona State University"",
               ""wrong_answer"": ""University of Arizona""
-            },
-            {
-              ""question"": ""How many times has NASA investigated a planet made of metal before?"",
-              ""correct_answer"": ""Never"",
-              ""wrong_answer"": ""Twice""
             },
             {
               ""question"": ""What is being sent to Psyche to investigate?"",
