@@ -9,6 +9,14 @@ public class GameSettings : MonoBehaviour
     private static float volume = 5.0f;
     public static QuestionList questionList;
 
+    public static Question GetRandomQuestion()
+    {
+        int value = Random.Range(0, questionList.questions.Count - 1);
+        Question question = questionList.questions[value];
+        questionList.questions.RemoveAt(value);
+        return question;
+    }
+
     void Start()
     {
         GameObject.Find("Main Camera").GetComponent<AudioSource>().volume = GameSettings.GetVolume() / 10;

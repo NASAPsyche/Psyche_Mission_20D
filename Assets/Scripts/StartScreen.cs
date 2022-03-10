@@ -22,11 +22,6 @@ public class StartScreen : MonoBehaviour
         SceneManager.LoadScene("Scenes/Transition1");
     }
 
-    public static void Stats()
-    {
-        SceneManager.LoadScene("Scenes/StatsScreen");
-    }
-
     public static void Options()
     {
         SceneManager.LoadScene("Scenes/OptionsMenu");
