@@ -20,7 +20,7 @@ public class AnswerData
             },
             {
               ""question"": ""When is the launch of the Psyche spacecraft from Cape Canaveral, Florida?"",
-              ""correct_answer"": ""launch is in 2022"",
+              ""correct_answer"": ""Launch is in 2022"",
               ""wrong_answer"": """"
             },
             {
@@ -50,7 +50,7 @@ public class AnswerData
             },
             {
               ""question"": ""When will the Psyche spacecraft fly by Mars?"",
-              ""correct_answer"": ""it will fly by in 2023"",
+              ""correct_answer"": ""It will fly by in 2023"",
               ""wrong_answer"": """"
             },
             {
@@ -90,7 +90,7 @@ public class AnswerData
             },
             {
               ""question"": ""Is Earth made of metal like Psyche?"",
-              ""correct_answer"": ""Np"",
+              ""correct_answer"": ""No"",
               ""wrong_answer"": ""Yes""
             },
             {
