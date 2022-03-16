@@ -1419,7 +1419,7 @@ GameObject:
   - component: {fileID: 980395463}
   - component: {fileID: 980395462}
   m_Layer: 0
-  m_Name: IMG_3465
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
