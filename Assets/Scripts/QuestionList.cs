@@ -9,13 +9,13 @@ public class AnswerData
     @"{
        ""questions"": [
             {
-              ""question"": ""Psyche is the name of?"",
-              ""correct_answer"": ""An asteroid"",
-              ""wrong_answer"": ""A person""
+              ""question"": ""Psyche is the name of a/an?"",
+              ""correct_answer"": ""asteroid"",
+              ""wrong_answer"": ""person""
             },
             {
               ""question"": ""What are most asteroids made of?"",
-              ""correct_answer"": ""Rock or ice"",
+              ""correct_answer"": ""Rock"",
               ""wrong_answer"": ""Chocolate""
             },
             {
@@ -24,7 +24,7 @@ public class AnswerData
               ""wrong_answer"": """"
             },
             {
-              ""question"": ""Who has been to the Psyche asteroid?"",
+              ""question"": ""Who has visited the Psyche asteroid?"",
               ""correct_answer"": ""No one"",
               ""wrong_answer"": """"
             },
@@ -34,18 +34,18 @@ public class AnswerData
               ""wrong_answer"": ""No""
             },
             {
-              ""question"": ""How long will the Psyche Mission last?"",
+              ""question"": ""How long will it take the spacecraft to reach the asteroid?"",
               ""correct_answer"": ""3.4 years"",
               ""wrong_answer"": ""3.4 seconds""
             },
             {
-              ""question"": ""What is the size of the spacecraft?"",
-              ""correct_answer"": ""The size of one tennis court"",
+              ""question"": ""The size of the spacecraft is close to a/an?"",
+              ""correct_answer"": ""single tennis court"",
               ""wrong_answer"": """"
             },
             {
-              ""question"": ""What are the terrestrial planets?"",
-              ""correct_answer"": ""Mercury, Venus, Earth and Mars"",
+              ""question"": ""What is NOT considered a terrestrial planet?"",
+              ""correct_answer"": ""Jupiter"",
               ""wrong_answer"": """"
             },
             {
@@ -59,13 +59,8 @@ public class AnswerData
               ""wrong_answer"": ""Three""
             },
             {
-              ""question"": ""How long have we known what Psyche is made of?"",
-              ""correct_answer"": ""Since 2010"",
-              ""wrong_answer"": """"
-            },
-            {
               ""question"": ""When was the Psyche mission selected by NASA?"",
-              ""correct_answer"": ""Jan 4, 2017"",
+              ""correct_answer"": ""Selected in 2017"",
               ""wrong_answer"": """"
             },
             {
@@ -74,13 +69,13 @@ public class AnswerData
               ""wrong_answer"": """"
             },
             {
-              ""question"": ""What will happen at the end of the mission?"",
-              ""correct_answer"": ""The spacecraft will stay in orbit around Psyche"",
-              ""wrong_answer"": """"
+              ""question"": ""Will the spacecraft return to Earth after the mission?"",
+              ""correct_answer"": ""No"",
+              ""wrong_answer"": ""Yes""
             },
             {
-              ""question"": ""What is the Psyche asteroid orbiting?"",
-              ""correct_answer"": ""The Sun"",
+              ""question"": ""Where is the Psyche Asteroid?"",
+              ""correct_answer"": ""Asteroid Belt"",
               ""wrong_answer"": """"
             },
             {
@@ -89,14 +84,19 @@ public class AnswerData
               ""wrong_answer"": """"
             },
             {
-              ""question"": ""Is Earth made of metal like Psyche?"",
+              ""question"": ""Has NASA sent a spacecraft to a metallic asteroid before ?"",
               ""correct_answer"": ""No"",
               ""wrong_answer"": ""Yes""
             },
             {
               ""question"": ""Who discovered the Psyche asteroid?"",
               ""correct_answer"": ""Annibale de Gasparis"",
-              ""wrong_answer"": """"
+              ""wrong_answer"": ""Galileo""
+            },
+            {
+              ""question"": ""What is being sent to investigate Psyche?"",
+              ""correct_answer"": ""spacecraft"",
+              ""wrong_answer"": ""alien""
             }
         ]
     }";
