@@ -2713,8 +2713,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Drag the correct choices below to the correct answer boxes next to the
-    questions
+  m_Text: Drag the correct choices below to the correct shaded answer boxes next
+    to the questions
 --- !u!222 &2037989163
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -277,20 +277,28 @@ public class GameScript : MonoBehaviour
         }
         else
         {
-
+            for(int i = 1; i <= 4; i++)
+			{
+                GameObject.Find("Question" + i).GetComponent<Text>().text = GameObject.Find("Question" + i).GetComponent<Text>().text.Replace("✔️", "");
+                GameObject.Find("Question" + i).GetComponent<Text>().text = GameObject.Find("Question" + i).GetComponent<Text>().text.Replace('\u2573'.ToString() + " ", "");
+            }
             int counter = 0;
 
             if (answer1)
             {
-                string answerText = answer1.GetComponent<Text>().text;
+                string answerText = answer1.GetComponent<Text>().text; 
                 if (answerText == question1.correct_answer)
                 {
                     GameObject.Find("Question1").GetComponent<Text>().color = Color.green;
+                    answerText = GameObject.Find("Question1").GetComponent<Text>().text.Insert(0, "✔️");
+                    GameObject.Find("Question1").GetComponent<Text>().text = answerText;
                     counter++;
                 }
                 else
                 {
                     GameObject.Find("Question1").GetComponent<Text>().color = Color.red;
+                    string wrongAnswer = GameObject.Find("Question1").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
+                    GameObject.Find("Question1").GetComponent<Text>().text = wrongAnswer; 
                 }
             }
             else
@@ -304,11 +312,15 @@ public class GameScript : MonoBehaviour
                 if (answerText == question2.correct_answer)
                 {
                     GameObject.Find("Question2").GetComponent<Text>().color = Color.green;
+                    string correctAnswer = GameObject.Find("Question2").GetComponent<Text>().text.Insert(0, "✔️");
+                    GameObject.Find("Question2").GetComponent<Text>().text = correctAnswer;
                     counter++;
                 }
                 else
                 {
                     GameObject.Find("Question2").GetComponent<Text>().color = Color.red;
+                    string wrongAnswer = GameObject.Find("Question2").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
+                    GameObject.Find("Question2").GetComponent<Text>().text = wrongAnswer;
                 }
             }
             else
@@ -322,11 +334,15 @@ public class GameScript : MonoBehaviour
                 if (answerText == question3.correct_answer)
                 {
                     GameObject.Find("Question3").GetComponent<Text>().color = Color.green;
+                    answerText = GameObject.Find("Question3").GetComponent<Text>().text.Insert(0, "✔️");
+                    GameObject.Find("Question3").GetComponent<Text>().text = answerText;
                     counter++;
                 }
                 else
                 {
                     GameObject.Find("Question3").GetComponent<Text>().color = Color.red;
+                    string wrongAnswer = GameObject.Find("Question3").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
+                    GameObject.Find("Question3").GetComponent<Text>().text = wrongAnswer;
                 }
             }
             else
@@ -340,11 +356,15 @@ public class GameScript : MonoBehaviour
                 if (answerText == question4.correct_answer)
                 {
                     GameObject.Find("Question4").GetComponent<Text>().color = Color.green;
+                    answerText = GameObject.Find("Question4").GetComponent<Text>().text.Insert(0, "✔️");
+                    GameObject.Find("Question4").GetComponent<Text>().text = answerText;
                     counter++;
                 }
                 else
                 {
                     GameObject.Find("Question4").GetComponent<Text>().color = Color.red;
+                    string wrongAnswer = GameObject.Find("Question4").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
+                    GameObject.Find("Question4").GetComponent<Text>().text = wrongAnswer;
                 }
             }
             else
