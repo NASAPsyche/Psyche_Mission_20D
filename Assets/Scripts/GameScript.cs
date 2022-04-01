@@ -29,6 +29,9 @@ public class GameScript : MonoBehaviour
     //Whether the game has been won (to lock drag and drop)
     private static bool won = false;
 
+    //Global variable
+    public static bool isCorrect = true;
+
     //Initalize the game on page load
     void Start()
     {
@@ -37,6 +40,14 @@ public class GameScript : MonoBehaviour
         GetQuestions();
         InitializeAnswerArray();
         AssignAnswers();
+        GameObject.Find("check1").GetComponent<Image>().enabled = false;
+        GameObject.Find("check2").GetComponent<Image>().enabled = false;
+        GameObject.Find("check3").GetComponent<Image>().enabled = false;
+        GameObject.Find("check4").GetComponent<Image>().enabled = false;
+        GameObject.Find("cross1").GetComponent<Image>().enabled = false;
+        GameObject.Find("cross2").GetComponent<Image>().enabled = false;
+        GameObject.Find("cross3").GetComponent<Image>().enabled = false;
+        GameObject.Find("cross4").GetComponent<Image>().enabled = false;
     }
 
     //Stores the original positions of the answers if one is drug out of an answer slot
@@ -276,12 +287,7 @@ public class GameScript : MonoBehaviour
             GameSettings.AdvanceGame();
         }
         else
-        {
-            for(int i = 1; i <= 4; i++)
-			{
-                GameObject.Find("Question" + i).GetComponent<Text>().text = GameObject.Find("Question" + i).GetComponent<Text>().text.Replace("✔️", "");
-                GameObject.Find("Question" + i).GetComponent<Text>().text = GameObject.Find("Question" + i).GetComponent<Text>().text.Replace('\u2573'.ToString() + " ", "");
-            }
+        { 
             int counter = 0;
 
             if (answer1)
@@ -289,21 +295,27 @@ public class GameScript : MonoBehaviour
                 string answerText = answer1.GetComponent<Text>().text; 
                 if (answerText == question1.correct_answer)
                 {
-                    GameObject.Find("Question1").GetComponent<Text>().color = Color.green;
-                    answerText = GameObject.Find("Question1").GetComponent<Text>().text.Insert(0, "✔️");
-                    GameObject.Find("Question1").GetComponent<Text>().text = answerText;
+                    //GameObject.Find("Question1").GetComponent<Text>().color = Color.green;
+                    //answerText = GameObject.Find("Question1").GetComponent<Text>().text.Insert(0, "✔️");
+                    //GameObject.Find("Question1").GetComponent<Text>().text = answerText;
+                    GameObject.Find("check1").GetComponent<Image>().enabled = true;
+                    GameObject.Find("cross1").GetComponent<Image>().enabled = false;
                     counter++;
                 }
                 else
                 {
-                    GameObject.Find("Question1").GetComponent<Text>().color = Color.red;
-                    string wrongAnswer = GameObject.Find("Question1").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
-                    GameObject.Find("Question1").GetComponent<Text>().text = wrongAnswer; 
+                    //GameObject.Find("Question1").GetComponent<Text>().color = Color.red;
+                    //string wrongAnswer = GameObject.Find("Question1").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
+                    //GameObject.Find("Question1").GetComponent<Text>().text = wrongAnswer; 
+                    GameObject.Find("check1").GetComponent<Image>().enabled = false;
+                    GameObject.Find("cross1").GetComponent<Image>().enabled = true;
                 }
             }
             else
             {
-                GameObject.Find("Question1").GetComponent<Text>().color = Color.white;
+                //GameObject.Find("Question1").GetComponent<Text>().color = Color.white;
+                GameObject.Find("check1").GetComponent<Image>().enabled = false;
+                GameObject.Find("cross1").GetComponent<Image>().enabled = false;
             }
 
             if(answer2)
@@ -311,21 +323,20 @@ public class GameScript : MonoBehaviour
                 string answerText = answer2.GetComponent<Text>().text;
                 if (answerText == question2.correct_answer)
                 {
-                    GameObject.Find("Question2").GetComponent<Text>().color = Color.green;
-                    string correctAnswer = GameObject.Find("Question2").GetComponent<Text>().text.Insert(0, "✔️");
-                    GameObject.Find("Question2").GetComponent<Text>().text = correctAnswer;
+                    GameObject.Find("check2").GetComponent<Image>().enabled = true;
+                    GameObject.Find("cross2").GetComponent<Image>().enabled = false;
                     counter++;
                 }
                 else
                 {
-                    GameObject.Find("Question2").GetComponent<Text>().color = Color.red;
-                    string wrongAnswer = GameObject.Find("Question2").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
-                    GameObject.Find("Question2").GetComponent<Text>().text = wrongAnswer;
+                    GameObject.Find("check2").GetComponent<Image>().enabled = false;
+                    GameObject.Find("cross2").GetComponent<Image>().enabled = true;
                 }
             }
             else
             {
-                GameObject.Find("Question2").GetComponent<Text>().color = Color.white;
+                GameObject.Find("check2").GetComponent<Image>().enabled = false;
+                GameObject.Find("cross2").GetComponent<Image>().enabled = false;
             }
 
             if (answer3)
@@ -333,21 +344,20 @@ public class GameScript : MonoBehaviour
                 string answerText = answer3.GetComponent<Text>().text;
                 if (answerText == question3.correct_answer)
                 {
-                    GameObject.Find("Question3").GetComponent<Text>().color = Color.green;
-                    answerText = GameObject.Find("Question3").GetComponent<Text>().text.Insert(0, "✔️");
-                    GameObject.Find("Question3").GetComponent<Text>().text = answerText;
+                    GameObject.Find("check3").GetComponent<Image>().enabled = true;
+                    GameObject.Find("cross3").GetComponent<Image>().enabled = false;
                     counter++;
                 }
                 else
                 {
-                    GameObject.Find("Question3").GetComponent<Text>().color = Color.red;
-                    string wrongAnswer = GameObject.Find("Question3").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
-                    GameObject.Find("Question3").GetComponent<Text>().text = wrongAnswer;
+                    GameObject.Find("check3").GetComponent<Image>().enabled = false;
+                    GameObject.Find("cross3").GetComponent<Image>().enabled = true;
                 }
             }
             else
             {
-                GameObject.Find("Question3").GetComponent<Text>().color = Color.white;
+                GameObject.Find("check3").GetComponent<Image>().enabled = false;
+                GameObject.Find("cross3").GetComponent<Image>().enabled = false;
             }
 
             if (answer4)
@@ -355,21 +365,20 @@ public class GameScript : MonoBehaviour
                 string answerText = answer4.GetComponent<Text>().text;
                 if (answerText == question4.correct_answer)
                 {
-                    GameObject.Find("Question4").GetComponent<Text>().color = Color.green;
-                    answerText = GameObject.Find("Question4").GetComponent<Text>().text.Insert(0, "✔️");
-                    GameObject.Find("Question4").GetComponent<Text>().text = answerText;
+                    GameObject.Find("check4").GetComponent<Image>().enabled = true;
+                    GameObject.Find("cross4").GetComponent<Image>().enabled = false;
                     counter++;
                 }
                 else
                 {
-                    GameObject.Find("Question4").GetComponent<Text>().color = Color.red;
-                    string wrongAnswer = GameObject.Find("Question4").GetComponent<Text>().text.Insert(0, '\u2573'.ToString() + " ");
-                    GameObject.Find("Question4").GetComponent<Text>().text = wrongAnswer;
+                    GameObject.Find("check4").GetComponent<Image>().enabled = false;
+                    GameObject.Find("cross4").GetComponent<Image>().enabled = true;
                 }
             }
             else
             {
-                GameObject.Find("Question4").GetComponent<Text>().color = Color.white;
+                GameObject.Find("check4").GetComponent<Image>().enabled = false;
+                GameObject.Find("cross4").GetComponent<Image>().enabled = false;
             }
 
             if (counter == 4)
