@@ -1,1 +1,0 @@
-# Psyche_Mission_20D
